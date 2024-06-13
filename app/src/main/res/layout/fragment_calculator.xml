@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ListView
+        android:id="@+id/alliesUnits"
+        android:layout_width="166dp"
+        android:layout_height="316dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <ListView
+        android:id="@+id/allUnitsList"
+        android:layout_width="370dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="15dp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@+id/alliesUnits"
+        app:layout_constraintTop_toBottomOf="@+id/checkResultButton" />
+
+    <ListView
+        android:id="@+id/enemiesUnits"
+        android:layout_width="166dp"
+        android:layout_height="316dp"
+        android:layout_marginStart="30dp"
+        app:layout_constraintStart_toEndOf="@+id/alliesUnits"
+        app:layout_constraintTop_toTopOf="@+id/alliesUnits" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="Allies:"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/alliesUnits"
+        app:layout_constraintStart_toStartOf="@+id/alliesUnits"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enemies:"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/enemiesUnits"
+        app:layout_constraintStart_toStartOf="@+id/enemiesUnits"
+        app:layout_constraintTop_toTopOf="@+id/textView5" />
+
+    <Button
+        android:id="@+id/checkResultButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Check"
+        app:layout_constraintStart_toStartOf="@+id/addAllieButton"
+        app:layout_constraintTop_toBottomOf="@+id/addAllieButton" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:maxWidth="250dp"
+        android:text="Press to reveal who wins."
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/checkResultButton"
+        app:layout_constraintStart_toEndOf="@+id/checkResultButton"
+        app:layout_constraintTop_toTopOf="@+id/checkResultButton"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <Button
+        android:id="@+id/addAllieButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Add"
+        app:layout_constraintStart_toStartOf="@+id/alliesUnits"
+        app:layout_constraintTop_toBottomOf="@+id/alliesUnits" />
+
+    <Button
+        android:id="@+id/addEnemyButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add"
+        app:layout_constraintEnd_toEndOf="@+id/enemiesUnits"
+        app:layout_constraintTop_toTopOf="@+id/addAllieButton" />
+
+    <Button
+        android:id="@+id/clearRecruitListButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clear"
+        app:layout_constraintEnd_toStartOf="@+id/addEnemyButton"
+        app:layout_constraintStart_toEndOf="@+id/addAllieButton"
+        app:layout_constraintTop_toTopOf="@+id/addAllieButton" />
+</androidx.constraintlayout.widget.ConstraintLayout>

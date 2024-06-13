@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="380dp"
+    android:layout_gravity="center|top">
+
+    <EditText
+        android:id="@+id/addSecondPlayerName"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+
+        android:text="Player2"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/addFirstPlayerName" />
+
+    <RadioButton
+        android:id="@+id/addSecondPlayerWin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Defeat"
+        app:layout_constraintEnd_toEndOf="@+id/addSecondPlayerName"
+        app:layout_constraintTop_toTopOf="@+id/addFirstPlayerWin" />
+
+    <EditText
+        android:id="@+id/addFirstPlayerName"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="40dp"
+
+        android:text="Player1"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioButton
+        android:id="@+id/addFirstPlayerWin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Win"
+        app:layout_constraintStart_toStartOf="@+id/addFirstPlayerName"
+        app:layout_constraintTop_toBottomOf="@+id/addFirstPlayerName" />
+
+    <EditText
+        android:id="@+id/addEndDate"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="end date"
+        android:textAlignment="center"
+        android:inputType="number"
+        android:digits="0123456789."
+        app:layout_constraintEnd_toStartOf="@+id/addEndTime"
+        app:layout_constraintTop_toTopOf="@+id/addStartDate" />
+
+    <EditText
+        android:id="@+id/addStartDate"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textAlignment="center"
+        android:text="start date"
+        android:inputType="number"
+        android:digits="0123456789."
+        app:layout_constraintStart_toStartOf="@+id/addFirstPlayerWin"
+        app:layout_constraintTop_toBottomOf="@+id/addFirstPlayerWin" />
+
+    <EditText
+        android:id="@+id/addStartTime"
+        android:layout_width="55dp"
+        android:layout_height="wrap_content"
+        android:inputType="time"
+        android:text="time"
+        android:textAlignment="center"
+        app:layout_constraintStart_toEndOf="@+id/addStartDate"
+        app:layout_constraintTop_toTopOf="@+id/addStartDate" />
+
+    <EditText
+        android:id="@+id/addEndTime"
+        android:layout_width="55dp"
+        android:layout_height="wrap_content"
+        android:inputType="time"
+        android:text="time"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@+id/addSecondPlayerWin"
+        app:layout_constraintTop_toTopOf="@+id/addEndDate" />
+
+    <EditText
+        android:id="@+id/addRounds"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="rounds played"
+        android:textAlignment="center"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/addEndTime"
+        app:layout_constraintTop_toTopOf="@+id/addMapName" />
+
+    <EditText
+        android:id="@+id/addMapName"
+        android:layout_width="150dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="16dp"
+        android:text="map name"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="@+id/addStartDate"
+        app:layout_constraintTop_toBottomOf="@+id/addStartDate" />
+
+    <Button
+        android:id="@+id/addWindowAddButton"
+        android:layout_width="70dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="24dp"
+        android:text="Add"
+        app:layout_constraintEnd_toEndOf="@+id/addRounds"
+        app:layout_constraintTop_toBottomOf="@+id/addRounds" />
+
+    <Button
+        android:id="@+id/addWindowCancelButton"
+        android:layout_width="95dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="30dp"
+        android:text="Cancel"
+        app:layout_constraintEnd_toStartOf="@+id/addWindowAddButton"
+        app:layout_constraintTop_toTopOf="@+id/addWindowAddButton" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
